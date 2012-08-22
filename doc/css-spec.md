@@ -30,7 +30,7 @@
     float:left;
     width:108px;
     padding-top:20px;
-    text-indent:-9999em
+    text-indent:-9999px
 }
 ```
 
