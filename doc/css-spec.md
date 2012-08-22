@@ -24,6 +24,7 @@
 2. 块状或行内元素，都请使用 `/* comment */` 注释，注释文字前后端保持各有**一个空格**
 
 单行注释例子：
+```css
 /* logo */
 .header-holder .logo-holder{
     float:left;
@@ -31,7 +32,7 @@
     padding-top:20px;
     text-indent:-9999em
 }
-
+```
 
 多行注释例子：
 
