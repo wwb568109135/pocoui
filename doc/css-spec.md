@@ -1,20 +1,52 @@
 #CSS 规范
 
+
+制定本规范的目的在于使我们的CSS代码更加易于维护和重用，从而提升效率
+
 ---
 
 
+
 ##申明及注释
-1. 文件头部必须加上文件申明信息，必须包括文件描述、作者、最后更新(更新人+时间)
+1. 文件头部必须加上文件申明信息，必须包括文件描述、作者
 
 例子：
 
 ```css
 /*
+* @todo: 表示该处功能还未实现, 无就不用写
+* @notes: 记录一些需要注意的信息，提醒开发者注意而已, 无就不用写
 * @description: 描述（可写中文）
-* @overview: 组件描述
 * @author: kidney(104958345@qq.com)
 */
 ```
+
+2. 块状或行内元素，都请使用 `/* comment */` 注释，注释文字前后端保持各有**一个空格**
+
+单行注释例子：
+/* logo */
+.header-holder .logo-holder{
+    float:left;
+    width:108px;
+    padding-top:20px;
+    text-indent:-9999em
+}
+
+
+多行注释例子：
+
+```css
+/* 弹出框遮罩层
+xxxxxx
+yyyyyyyyy
+*/
+.ui-dialog-mask{
+    background-color: #000;
+    opacity: .25;
+    filter: Alpha(Opacity=25)
+}
+```
+
 
 
 ##编码
