@@ -2,36 +2,36 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <title>IE6 and the 3px bug</title>
-<link rel="stylesheet" type="text/css" href="../../base.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" href="../../base.css">
 <style type="text/css">
 body{
 	padding: 50px;
 }
-.main{
+#main{
 	width: 800px;
-	background: #ff0;
+	background-color: #ff0;
 }
-.box1{
+#box1{
 	float: left;
-	display:inline;
+	display: inline;
 	width: 200px;
 	height: 100px;
-	background: #000;	
+	background-color: #000;	
 }
-.box2{
+#box2{
 	width: 600px;
 	height: 100px;
 	margin-left: 200px;
-	background: #ccc;
+	background-color: #ccc;
 }
 </style>
 </head>
 
 <body>
-<div class="main">
-	<div class="box1"></div><div class="box2"></div>
+<div id="main">
+	<div id="box1"></div>
+	<div id="box2"></div>
 </div>
 </body>
 </html>

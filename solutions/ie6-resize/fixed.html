@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>IE6 resize bug</title>
+<link rel="stylesheet" type="text/css" charset="utf-8" href="../../base.css">
+<style type="text/css">
+body {
+	border: 1px solid;
+	margin: 0 auto;
+	position: relative; /* the fixed */
+	width: 40em;
+}
+#example p {
+	border: 1px solid green;
+	position: relative;
+}
+
+#description {
+	background: #FFFFF0;
+	border: 1px solid #C0C0C0;
+	padding: 0 0.5em;
+	margin-bottom: 1em;
+	width: 50%;
+}
+#description .final {
+	text-align: right;
+}
+</style>
+</head>
+
+<body>
+<div id="description">
+	<h1>IE6 resize bug</h1>
+	<p>Open this page in IE6 and resize the window. See how the element below
+	stays fixed while the body element moves. </p>
+	<p class="final"><a href="#" title="IE6 resize bug explained">Read the article</a></p>
+</div>
+
+<div id="example">
+	<p>This text stays fixed on the page if you resize. But only until you reload...</p>
+</div>
+</body>
+</html>
