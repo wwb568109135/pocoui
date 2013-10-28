@@ -77,7 +77,9 @@ yyyyyyyyy
         </ul>
     </div>
 </div>
+```
 
+```html
 <!-- 不推荐 -->
 <div class="global-topbar">
     <div class="body">
@@ -87,7 +89,9 @@ yyyyyyyyy
         </ul>
     </div>
 </div>
+```
 
+```html
 <!-- 推荐 -->
 <div class="ui-box">
         <h3 class="ui-box-title"></h3>
