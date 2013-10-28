@@ -5,8 +5,8 @@
 ---
 
 ##申明及注释
-1. 文件头部必须加上文件申明信息，必须包括文件描述、作者
 
+ 1. 文件头部必须加上文件申明信息，必须包括文件描述、作者
 例子：
 
 ```css
@@ -17,8 +17,7 @@
 * @author: kidney(104958345@qq.com)
 */
 ```
-
-2. 块状或行内元素，都请使用 `/* comment */` 注释，注释文字前后端保持各有**一个空格**
+ 2. 块状或行内元素，都请使用 `/* comment */` 注释，注释文字前后端保持各有**一个空格**
 
 单行注释例子：
 ```css
@@ -45,8 +44,7 @@ yyyyyyyyy
 
 
 ##编码
-1. 为了防止文件合并及编码转换时造成问题，建议将样式中文字体名字改成对应的英文名字，几个单词中间有空格组成的必须加引号)，如：
-
+1. 为了防止文件合并及编码转换时造成问题，建议将样式中文字体名字改成对应的英文名字，几个单词中间有空格组成的必须加引号)如：
 ```css
 .cn-font{
     // 微软雅黑, 黑体, 宋体
@@ -67,23 +65,34 @@ yyyyyyyyy
 5. 采用通俗易懂的英文单词并按内容/功能命名，严禁出现如left、right等方向名词的class/id，严禁出现如xxx1、xxx2等的数字class/id。
 
 6. 尽可能提高代码模块的复用，复用模块、独立模块可按xxx-mod命名（-mod可不写），mod下面再取xxx-hd|head（头部）、xxx-body|content（内容）、xxx-ft|footer（底部）命名.
+
 例如：
 
 ```html
 <!-- 推荐 -->
 <div class="global-topbar">
-    <div class="global-topbar-body"></div>
+    <div class="global-topbar-body">
+        <ul class="global-nav-main">
+            <li class="global-nav-item">1</li>
+            <li class="global-nav-item">2</li>
+        </ul>
+    </div>
 </div>
 
 <!-- 不推荐 -->
 <div class="global-topbar">
-    <div class="body"></div>
+    <div class="body">
+        <ul class="main">
+            <li class="item">1</li>
+            <li class="item">2</li>
+        </ul>
+    </div>
 </div>
 
 <!-- 推荐 -->
 <div class="ui-box">
-    <h3 class="ui-box-title"></h3>
-    <p class="ui-box-conent"></p>
+        <h3 class="ui-box-title"></h3>
+        <p class="ui-box-conent"></p>
 </div>
 
 <!-- 不推荐 -->
@@ -92,8 +101,6 @@ yyyyyyyyy
     <p class="conent"></p>
 </div>
 ```
-
-
 
 7. 常用命名（多记多查英文单词，多问谷歌翻译）：page、wrap、layout、header(head、hd)、footer(foot、ft)、content(cont)、body、menu、nav、main、submain、sidebar(side)、logo、banner、title(tit)、popo(pop)、icon、note、btn、txt、iblock、window(win)、tips等。
 
