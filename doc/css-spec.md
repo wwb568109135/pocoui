@@ -68,34 +68,31 @@ yyyyyyyyy
 6. 尽可能提高代码模块的复用，复用模块、独立模块可按xxx-mod命名（-mod可不写），mod下面再取xxx-hd|head（头部）、xxx-body|content（内容）、xxx-ft|footer（底部）命名.
 例如：
 ```html
+
 <!-- 推荐 -->
 <div class="global-topbar">
-    <div class="global-topbar-body">
-        <ul class="global-nav-main">
-            <li class="global-nav-item">1</li>
-            <li class="global-nav-item">2</li>
-        </ul>
-    </div>
+<div class="global-topbar-body">
+    <ul class="global-nav-main">
+        <li class="global-nav-item">1</li>
+        <li class="global-nav-item">2</li>
+    </ul>
 </div>
-```
+</div>
 
-```html
 <!-- 不推荐 -->
 <div class="global-topbar">
-    <div class="body">
-        <ul class="main">
-            <li class="item">1</li>
-            <li class="item">2</li>
-        </ul>
-    </div>
+<div class="body">
+    <ul class="main">
+        <li class="item">1</li>
+        <li class="item">2</li>
+    </ul>
 </div>
-```
+</div>
 
-```html
 <!-- 推荐 -->
 <div class="ui-box">
-        <h3 class="ui-box-title"></h3>
-        <p class="ui-box-conent"></p>
+    <h3 class="ui-box-title"></h3>
+    <p class="ui-box-conent"></p>
 </div>
 
 <!-- 不推荐 -->
@@ -104,6 +101,7 @@ yyyyyyyyy
     <p class="conent"></p>
 </div>
 ```
+
 
 7. 常用命名（多记多查英文单词，多问谷歌翻译）：page、wrap、layout、header(head、hd)、footer(foot、ft)、content(cont)、body、menu、nav、main、submain、sidebar(side)、logo、banner、title(tit)、popo(pop)、icon、note、btn、txt、iblock、window(win)、tips等。
 
