@@ -110,7 +110,7 @@
 一般分三行，按顺序：
 1. 显示属性， 如：`display` `position` `float` `list-style` `clear`
 
-2. 自身属性， 如：``border` `margin` `padding` `width` `height` `background`
+2. 自身属性， 如：`border` `margin` `padding` `width` `height` `background`
 
 3. 文本属性， 如：`color` `font` `vertical-align` `text-align` `text-decoration`
 
