@@ -123,7 +123,6 @@
         display: inline-block;
         
         /* 自身属性 */
-        
         border: 1px solid #5cb325;
         margin: 10px 0;
         padding: 0 33px;
