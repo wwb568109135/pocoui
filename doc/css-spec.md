@@ -114,7 +114,7 @@
 
 3. 文本属性， 如：`color` `font` `vertical-align` `text-align` `text-decoration`
 
-例子:
+    例子:
 
     ```css
     .button {
