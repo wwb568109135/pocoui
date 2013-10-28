@@ -106,3 +106,29 @@
 
 
 ##书写顺序
+
+一般分三行，按顺序：
+1. 显示属性， 如：`display` `position` `float`
+2. 自身属性， 如：`font` `border` `margin` `padding` `width` `height` `line-height`
+3. 文本属性， 如：`color` `background` `vertical-align` `text-align` `text-decoration`
+
+    ```css
+    .button {
+        /* 显示属性 */
+        position: relative;
+        display: inline-block;
+        
+        /* 自身属性 */
+        font-size: 22px;
+        border: 1px solid #5cb325;
+        margin: 10px 0;
+        padding: 0 33px;
+        width: 100px;
+        height: 30px;
+        line-height: 30px;
+
+        /* 文本属性 */
+        color: #fff;
+        background-color: #58ac23;
+    }
+    ```
