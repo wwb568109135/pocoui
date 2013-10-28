@@ -46,6 +46,7 @@ yyyyyyyyy
 
 ##编码
 1. 为了防止文件合并及编码转换时造成问题，建议将样式中文字体名字改成对应的英文名字，几个单词中间有空格组成的必须加引号)，如：
+
 ```css
 .cn-font{
     // 微软雅黑, 黑体, 宋体
@@ -67,26 +68,16 @@ yyyyyyyyy
 
 6. 尽可能提高代码模块的复用，复用模块、独立模块可按xxx-mod命名（-mod可不写），mod下面再取xxx-hd|head（头部）、xxx-body|content（内容）、xxx-ft|footer（底部）命名.
 例如：
-```html
 
+```html
 <!-- 推荐 -->
 <div class="global-topbar">
-<div class="global-topbar-body">
-    <ul class="global-nav-main">
-        <li class="global-nav-item">1</li>
-        <li class="global-nav-item">2</li>
-    </ul>
-</div>
+    <div class="global-topbar-body"></div>
 </div>
 
 <!-- 不推荐 -->
 <div class="global-topbar">
-<div class="body">
-    <ul class="main">
-        <li class="item">1</li>
-        <li class="item">2</li>
-    </ul>
-</div>
+    <div class="body"></div>
 </div>
 
 <!-- 推荐 -->
@@ -101,6 +92,7 @@ yyyyyyyyy
     <p class="conent"></p>
 </div>
 ```
+
 
 
 7. 常用命名（多记多查英文单词，多问谷歌翻译）：page、wrap、layout、header(head、hd)、footer(foot、ft)、content(cont)、body、menu、nav、main、submain、sidebar(side)、logo、banner、title(tit)、popo(pop)、icon、note、btn、txt、iblock、window(win)、tips等。
