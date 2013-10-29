@@ -144,12 +144,22 @@ Your browser does not support the video tag.
 ```
 
 ###ICON `<i>`
-i for Italic，原意是呈现斜体的文本，现在 `<i>` 基本上已经被抛弃，附上 `class` 属性后，就变作 icon 雪碧图的载体
+i for Italic，原意是呈现斜体的文本，现在 `<i>` 基本上已经被抛弃，附上 `class` 属性后，就变作 icon 雪碧图或 iconfont 的载体
 
 ###地球上出现最多的标签 `<div>/<span>`
-用法是尽量使用其他来做为页面框架的容器，比如布局、添加额外的视觉效果，而不是段落等的替代品。
+从搜索引擎角度看，这2个标签没有任何语义，用法是尽量使用其他来做为页面框架的容器，比如布局、添加额外的视觉效果，而不是段落等的替代品。
 
 ###分节元素 `<section>/<article>/<aside>/<nav>`
+
+####section
+摘自www.w3.org
+> The section element represents a generic section of a document or
+> application. A section, in this context, is a thematic grouping of
+> content, typically with a heading.
+
+还有
+
+> Authors are encouraged to use the article element instead of the section element when it would make sense to syndicate the contents of the element.
 
 例子：
 ```html
@@ -213,6 +223,8 @@ IE6、IE7、IE8浏览器不支持？用[html5shiv][2]，将它们注入到 DOM �
     <script src="//cb.poco.cn/utility/html5shiv/3.7.0/html5shiv.js"></script>
 <![endif]-->
 ```
+
+http://www.ascii-code.com/html-symbol.php
 
 ##延伸阅读：
  - [HTML5语义][1]
