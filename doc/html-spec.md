@@ -62,7 +62,7 @@ html文件统一使用`gb2312`编码，js和css文件如果是使用`utf8`编码
 
   - `link` - 用于引入 css 资源时，可省去`media`(默认为all) 和 `type`(默认为text/css) 属性
   - `style` - `type` 默认为 `text/css`，可以省去
-  - `script` - `type` 属性可以省去; 不赞成使用`lang`属性; 不要使用古老的`<!– //–>`这种hack脚本, 它用于阻止第一代浏览器（Netscape 1和Mosaic）将脚本显示成文字
+  - `script` - `type` 属性可以省去，不赞成使用`lang`属性，不要使用古老的`<!– //–>`这种hack脚本，它用于阻止第一代浏览器（Netscape 1和Mosaic）将脚本显示成文字
 
 
 ###段落/标题 `<p>/<h1>/<h2>/<h3>/<h4>/<h5>/<h6>`
@@ -77,11 +77,49 @@ html文件统一使用`gb2312`编码，js和css文件如果是使用`utf8`编码
 
 ###无序/有序列表 `<ul>/<ol>`
 
+  - `ul` 表示无序列表
+  - `ol` 表示有序列表, 可用于排行榜等
+  - `li` 表示列表项，必须是`ul/ol`的子元素
+
+
 ###定义列表 `<dl>`
+`<dl>` - 关联列表，`<dd>` 是对 `<dt>` 的解释
+
+`<dt>` 和 `<dd>` 的对应关系比较随意：
+
+ - 一个 `<dt>` 对应多个 `<dd>`
+ - 多个 `<dt>` 对应一个 `<dd>`
+ - 多个 `<dt>` 对应多个 `<dd>`
+
+这些都是合法，可用于名词/单词解释、日程列表、站点目录
+
+摘自w3school例子：
+```html
+<dl>
+  <dt>Coffee</dt>
+  <dd>Black hot drink</dd>
+  <dt>Milk</dt>
+  <dd>White cold drink</dd>
+</dl>
+```
 
 ###表单项 `<form>/<input>/<textarea>/<select>`
 
+ - 添加 `<label>` 来描述该表单项的用途
+ - 表单元素的 `name` 不能设定为 `action/enctype/method/novalidate/target/submit` 会导致表单提交混乱
+
 ###换行 `<br>`
+使用 `<br />` 标签是来输入空行，而不是分隔段落或控制页面留白。
+
+###短语元素 `<em>/<strong>/<code>/<pre>`
+
+他们都是短语元素
+
+ - `<em>` 原单词为Emphasized text，呈现为被强调的文本
+ - `<strong>` 定义重要的文本
+ - `<code>` 原单词为Computer code text，定义重要的文本
+ - `<pre>` 原单词为Preformatted text，定义重要的文本
+
 
 ###图片 `<img>`
 图片必须加上alt
@@ -90,6 +128,22 @@ html文件统一使用`gb2312`编码，js和css文件如果是使用`utf8`编码
 ```
 
 ###流媒体 `<object>/<embed>/<video>/<audio>`
+
+ - `<video>` - 标签定义视频。
+ - `<audio>` - 标签定义声音，比如音乐或其他音频流。
+
+```html
+<video width="320" height="240" controls="controls">
+  <source src="movie.ogg" type="video/ogg">
+  <source src="movie.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+<audio src="someaudio.wav">您的浏览器不支持 audio 标签。</audio>
+```
+
+
+###地球上出现最多的标签：`<div>/<span>`
 
 
 延伸阅读：[HTML5语义][1]
