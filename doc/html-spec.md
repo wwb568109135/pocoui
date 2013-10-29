@@ -149,6 +149,11 @@ i for Italic，原意是呈现斜体的文本，现在 `<i>` 基本上已经被�
 ###地球上出现最多的标签 `<div>/<span>`
 从搜索引擎角度看，这2个标签没有任何语义，用法是尽量使用其他来做为页面框架的容器，比如布局、添加额外的视觉效果，而不是段落等的替代品。
 
+
+###字符实体
+HTML 中的预留字符必须被替换为字符实体，[字符实体表][5]
+
+
 ###分节元素 `<section>/<article>/<aside>/<nav>`
 
 ####section
@@ -235,3 +240,4 @@ http://www.ascii-code.com/html-symbol.php
 [2]: https://github.com/aFarkas/html5shiv
 [3]: http://bogu.me/2012/03/09/3207.html
 [4]: http://slides.html5rocks.com/#landing-slide
+[5]: http://www.ascii-code.com/html-symbol.php
