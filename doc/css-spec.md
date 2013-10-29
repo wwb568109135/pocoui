@@ -161,8 +161,10 @@
     ```
 
 ##其他
-- 适当使用 iconfont 代替雪碧图
+- 适当使用 [iconfont][9] 代替雪碧图
 - 大胆使用CSS3，低版本浏览器保持基本的视觉效果
+
+[9]: http://www.qianduan.net/css3-icon-font-guide.html
 
 
 ##样式预编译
