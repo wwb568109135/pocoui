@@ -58,6 +58,13 @@ html文件统一使用`gb2312`编码，js和css文件如果是使用`utf8`编码
 <title>It's me! 中国图片个人空间  mypoco -- POCO.CN</title>
 ```
 
+###静态文件引用/脚本/样式代码 `<link>/<script>/<style>`
+
+  - `link` - 用于引入 css 资源时，可省去`media`(默认为all) 和 `type`(默认为text/css) 属性
+  - `style` - `type` 默认为 `text/css`，可以省去
+  - `script` - `type` 属性可以省去; 不赞成使用`lang`属性; 不要使用古老的`<!– //–>`这种hack脚本, 它用于阻止第一代浏览器（Netscape 1和Mosaic）将脚本显示成文字
+
+
 ###段落/标题 `<p>/<h1>/<h2>/<h3>/<h4>/<h5>/<h6>`
 
 引用sofish的一段话：“我们可以用一本书的结构来说明这几个标签，而我们构建一个页面的时候，也应该有这样的一种思想在脑中”
