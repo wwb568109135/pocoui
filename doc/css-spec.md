@@ -41,12 +41,19 @@
 
 
 ##编码
-1. 为了防止文件合并及编码转换时造成问题，建议将样式中文字体名字改成对应的英文名字，几个单词中间有空格组成的必须加引号)，如：
+1. 统一使用utf8编码, 必要时加上`@charset "UTF-8";`
+2. 为了防止文件合并及编码转换时造成问题，建议将样式中文字体名字改成对应的英文名字，几个单词中间有空格组成的必须加引号，如：
 
     ```css
-    .cn-font{
-        // 微软雅黑, 黑体, 宋体
-        font-family: 'Microsoft Yahei', 'SimHei', 'SimSun';
+    .body{
+        font: 12px/1.5 tahoma, arial, 'Microsoft Yahei', 'SimHei';
+    }
+    ```
+3. 因为 Firefox 的某些版本和 Opera 不支持 SimSun 的写法，宋体改用unicode 表示，如：
+
+    ```css
+    body{
+        font: 12px/1.5 tahoma,arial,\5b8b\4f53;
     }
     ```
 
@@ -58,20 +65,22 @@
 
 3. 命名除 `.global-` `.fn-` `.ui-` `.J-` 外，可自定义命名。
 
-4. 一般情况下，如果命名比较通用，比如 `current` `active` `selected` `first` `last`，请限定在相应的上下文环境中。比如其父节点ID为#parent 等比较通用的命名，建议写成 `#parent .current{}`，而非 `.current{}`，即使是为了重用，也应该注意。只有在非常明确不会影响到其他组件工作，并且其他人不会写这种命名的情况下，才让它变成全局通用的。
+4. 一般情况下，如果命名比较通用，比如 `hover` `current` `active` `selected` `first` `last` `error` `success`等，请限定在相应的上下文环境中。比如其父节点ID为#parent 等比较通用的命名，建议写成 `#parent .current{}`，而非 `.current{}`，即使是为了重用，也应该注意。只有在非常明确不会影响到其他组件工作，并且其他人不会写这种命名的情况下，才让它变成全局通用的.
 
-5. 采用通俗易懂的英文单词并按内容/功能命名，严禁出现如xxx1、xxx2等的数字class/id。
+5. 采用通俗易懂的英文单词并按内容/功能命名，严禁出现如xxx1、xxx2等的数字class/id
 
-6. 尽可能提高代码模块的复用，复用模块、独立模块可按xxx-mod命名（-mod可不写），mod下面再取xxx-hd|head（头部）、xxx-body|content（内容）、xxx-ft|footer（底部）命名.
+6. 常用命名（多记多查英文单词，多问谷歌翻译）：page、wrap、layout、header(head、hd)、footer(foot、ft)、content(cont)、body、menu、nav、main、submain、sidebar(side)、logo、banner、title(tit)、popo(pop)、icon、note、button(btn)、txt、iblock、window(win)、tips等
+
+7. 对于复用性模块、独立模块可按xxx-mod命名（-mod可不写），mod下面再取xxx-head（头部）、xxx-body|content（内容）、xxx-footer（底部）命名. 而模块的状态，写成这样`.ui-name-hover` `.ui-name-error`
 
     例如：
     ```html
     <!-- 推荐 -->
     <div class="global-topbar">
         <div class="global-topbar-body">
-            <ul class="global-nav-main">
-                <li class="global-nav-item">1</li>
-                <li class="global-nav-item">2</li>
+            <ul class="global-topbar-nav">
+                <li class="global-topbar-nav-item">1</li>
+                <li class="global-topbar-nav-item">2</li>
             </ul>
         </div>
     </div>
@@ -97,15 +106,28 @@
         <h3 class="title"></h3>
         <p class="conent"></p>
     </div>
+    
+    <!-- 推荐 -->
+    <div class="ui-box ui-box-hover">
+        <h3 class="ui-box-title"></h3>
+        <p class="ui-box-conent"></p>
+    </div>
+    
+    <!-- 不推荐 -->
+    <div class="ui-box">
+        <h3 class="ui-box-title ui-box-hover"></h3>
+        <p class="ui-box-conent ui-box-hover"></p>
+    </div>
     ```
 
-7. 常用命名（多记多查英文单词，多问谷歌翻译）：page、wrap、layout、header(head、hd)、footer(foot、ft)、content(cont)、body、menu、nav、main、submain、sidebar(side)、logo、banner、title(tit)、popo(pop)、icon、note、btn、txt、iblock、window(win)、tips等。
-
-8. 作为JS接口的class或者ID，必须是以 `J-` 前缀开头，使用驼峰式命名：`J-feed-list`、`J-page`。除 JS 接口命名外，其他命名一律使用小写字母。
+8. 作为JS接口的class或者ID，必须是以 `J-` 前缀开头，如：`J-feed-list`、`J-page`.
 
 
 
 ##书写顺序
+
+扩展阅读：[Mozilla suggested css order][1]
+[1]: http://www.mozilla.org/css/base/content.css
 
 一般分三行，按顺序：
 
@@ -137,3 +159,8 @@
         color: #fff;
     }
     ```
+
+##样式预编译
+SASS在CSS的基础上做了一些扩展，使用SASS你可以使用一些简单的编程思想进来编写CSS。SASS是在Ruby环境下运行（[安装教程][2]），配搭上Compass
+
+[2]: http://www.w3cplus.com/sassguide/install.html
