@@ -178,13 +178,17 @@ gem install compass
 compass -v
 ```
 
-[compass用法指南][4]
+
 
 
 最后加上[grunt][5]和[grunt-contrib-compass][6]，负责编译、压缩、打包等处理，更好地开发，简化一定量的工作
 
 
-扩展阅读：[Grunt中文社区][7]
+扩展阅读：
+- [compass用法指南][4]
+- [compass参考文档][8]
+- [Grunt中文社区][7]
+
 
 [2]: http://www.w3cplus.com/sassguide/install.html
 [3]: http://compass-style.org/
@@ -192,3 +196,4 @@ compass -v
 [5]: http://gruntjs.com/
 [6]: https://npmjs.org/package/grunt-contrib-compass
 [7]: http://www.gruntjs.org/article/home.html
+[8]: http://compass-style.org/reference/compass/
