@@ -111,15 +111,16 @@ html文件统一使用`gb2312`编码，js和css文件如果是使用`utf8`编码
 ###换行 `<br>`
 使用 `<br />` 标签是来输入空行，而不是分隔段落或控制页面留白。
 
-###短语元素 `<em>/<strong>/<code>/<pre>`
+###短语元素 `<em>/<strong>/<code>`
 
 他们都是短语元素
 
  - `<em>` 原单词为Emphasized text，呈现为被强调的文本
  - `<strong>` 定义重要的文本
  - `<code>` 原单词为Computer code text，定义重要的文本
- - `<pre>` 原单词为Preformatted text，定义重要的文本
 
+###格式化片段 `<pre>`
+原单词为Preformatted text，定义重要的文本
 
 ###图片 `<img>`
 图片必须加上alt
@@ -131,7 +132,6 @@ html文件统一使用`gb2312`编码，js和css文件如果是使用`utf8`编码
 
  - `<video>` - 标签定义视频。
  - `<audio>` - 标签定义声音，比如音乐或其他音频流。
-
 ```html
 <video width="320" height="240" controls="controls">
   <source src="movie.ogg" type="video/ogg">
@@ -142,10 +142,22 @@ Your browser does not support the video tag.
 <audio src="someaudio.wav">您的浏览器不支持 audio 标签。</audio>
 ```
 
+###ICON `<i>`
+i for Italic，呈现斜体的文本，现在 `<i>` 基本上已经被抛弃
 
-###地球上出现最多的标签：`<div>/<span>`
+###地球上出现最多的标签 `<div>/<span>`
 
+###分节元素 `<section>/<article>/<aside>/<nav>`
+
+###老掉牙浏览器 vs HTML5
+IE6、IE7、IE8浏览器不支持？用[html5shiv][2]，将它们注入到 DOM 中 `</head>` 前面
+```html
+<!--[if lt IE 9]>
+    <script src="//cb.poco.cn/utility/html5shiv/3.7.0/html5shiv.js"></script>
+<![endif]-->
+```
 
 延伸阅读：[HTML5语义][1]
 
 [1]: http://www.infoq.com/cn/news/2011/09/understanding-html5-semantics
+[2]: https://github.com/aFarkas/html5shiv
