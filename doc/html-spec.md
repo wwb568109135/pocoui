@@ -132,6 +132,7 @@ html文件统一使用`gb2312`编码，js和css文件如果是使用`utf8`编码
 
  - `<video>` - 标签定义视频。
  - `<audio>` - 标签定义声音，比如音乐或其他音频流。
+
 ```html
 <video width="320" height="240" controls="controls">
   <source src="movie.ogg" type="video/ogg">
@@ -213,11 +214,12 @@ IE6、IE7、IE8浏览器不支持？用[html5shiv][2]，将它们注入到 DOM �
 <![endif]-->
 ```
 
-延伸阅读：
-
+##延伸阅读：
  - [HTML5语义][1]
  - [HTML5设计原理][3]
+ - [HTML示例][4]
 
 [1]: http://www.infoq.com/cn/news/2011/09/understanding-html5-semantics
 [2]: https://github.com/aFarkas/html5shiv
 [3]: http://bogu.me/2012/03/09/3207.html
+[4]: http://slides.html5rocks.com/#landing-slide
