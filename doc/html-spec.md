@@ -132,7 +132,6 @@ html文件统一使用`gb2312`编码，js和css文件如果是使用`utf8`编码
 
  - `<video>` - 标签定义视频。
  - `<audio>` - 标签定义声音，比如音乐或其他音频流。
- 
 ```html
 <video width="320" height="240" controls="controls">
   <source src="movie.ogg" type="video/ogg">
@@ -151,8 +150,61 @@ i for Italic，原意是呈现斜体的文本，现在 `<i>` 基本上已经被�
 
 ###分节元素 `<section>/<article>/<aside>/<nav>`
 
+```html
+<body>
+    <header>
+        <hgroup>
+            <h1>Page title</h1>
+            <h2>Page subtitle</h2>
+        </hgroup>
+    </header>
 
-###老掉牙浏览器 vs HTML5
+    <nav>
+        <ul>Navigation...</ul>
+    </nav>
+
+    <section>
+        <article>
+            <header>
+                <h1>Title</h1>
+            </header>
+            <section>Content...</section>
+        </article>
+        <article>
+            <header>
+                <h1>Title</h1>
+            </header>
+            <section>Content...</section>
+        </article>
+    </section>
+
+    <aside>
+        Top links...
+    </aside>
+
+    <figure>
+        <img src="..."/>
+        <figcaption>Chart 1.1</figcaption>
+    </figure>
+
+    <footer>
+        Copyright © <time datetime="2010-11-08">2010</time>.
+    </footer>
+</body>
+```
+
+##Why HTML5?
+
+###HTML5设计原理
+ 1. 避免不必要的复杂性
+ 2. 支持已有的内容
+ 3. 解决现实的问题
+ 4. 求真务实
+ 5. 平稳退化
+ 6. 最终用户优先
+
+
+##老掉牙浏览器 vs HTML5
 IE6、IE7、IE8浏览器不支持？用[html5shiv][2]，将它们注入到 DOM 中 `</head>` 前面
 ```html
 <!--[if lt IE 9]>
@@ -160,7 +212,11 @@ IE6、IE7、IE8浏览器不支持？用[html5shiv][2]，将它们注入到 DOM �
 <![endif]-->
 ```
 
-延伸阅读：[HTML5语义][1]
+延伸阅读：
+
+ - [HTML5语义][1]
+ - [HTML5设计原理][3]
 
 [1]: http://www.infoq.com/cn/news/2011/09/understanding-html5-semantics
 [2]: https://github.com/aFarkas/html5shiv
+[3]: http://bogu.me/2012/03/09/3207.html
