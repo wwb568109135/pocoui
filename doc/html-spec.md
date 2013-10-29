@@ -143,9 +143,10 @@ Your browser does not support the video tag.
 ```
 
 ###ICON `<i>`
-i for Italic，呈现斜体的文本，现在 `<i>` 基本上已经被抛弃
+i for Italic，原意是呈现斜体的文本，现在 `<i>` 基本上已经被抛弃，附上 `class` 属性后，就变作 icon 雪碧图的载体
 
 ###地球上出现最多的标签 `<div>/<span>`
+用法是尽量使用其他来做为页面框架的容器，比如布局、添加额外的视觉效果，而不是段落等的替代品。
 
 ###分节元素 `<section>/<article>/<aside>/<nav>`
 
