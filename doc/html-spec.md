@@ -132,6 +132,7 @@ html文件统一使用`gb2312`编码，js和css文件如果是使用`utf8`编码
 
  - `<video>` - 标签定义视频。
  - `<audio>` - 标签定义声音，比如音乐或其他音频流。
+ 
 ```html
 <video width="320" height="240" controls="controls">
   <source src="movie.ogg" type="video/ogg">
@@ -149,6 +150,7 @@ i for Italic，原意是呈现斜体的文本，现在 `<i>` 基本上已经被�
 用法是尽量使用其他来做为页面框架的容器，比如布局、添加额外的视觉效果，而不是段落等的替代品。
 
 ###分节元素 `<section>/<article>/<aside>/<nav>`
+
 
 ###老掉牙浏览器 vs HTML5
 IE6、IE7、IE8浏览器不支持？用[html5shiv][2]，将它们注入到 DOM 中 `</head>` 前面
