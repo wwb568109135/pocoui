@@ -53,7 +53,7 @@
 
     ```css
     body{
-        font: 12px/1.5 tahoma,arial,\5b8b\4f53;
+        font: 12px/1.5 tahoma, arial, \5b8b\4f53;
     }
     ```
 
@@ -160,7 +160,26 @@
     }
     ```
 
+
 ##样式预编译
-SASS在CSS的基础上做了一些扩展，使用SASS你可以使用一些简单的编程思想进来编写CSS。SASS是在Ruby环境下运行（[安装教程][2]），配搭上Compass
+SASS是在Ruby环境下运行（[安装教程][2]），SASS在CSS的基础上做了一些扩展，使用SASS你可以使用一些简单的编程思想进来编写CSS，SASS中可以定义变量、混合、嵌套以及函数等功能。
+
+当SASS配搭上[Compass][3]，才显出SASS正真威力，Compass是一个非常成熟的SASS库，可是一个很强大的框架
+
+安装了Ruby环境后，只需一句命令就可以安装compass
+
+```
+gem install compass
+```
+
+安装完成，运行下面命令，就会输出compass的版本
+
+```
+compass -v
+```
+
+[compass用法指南][4]
 
 [2]: http://www.w3cplus.com/sassguide/install.html
+[3]: http://compass-style.org/
+[4]: http://www.ruanyifeng.com/blog/2012/11/compass.html
