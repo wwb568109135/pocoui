@@ -8,15 +8,14 @@
 ```
 
 ##编码
-html文件统一使用`gb2312`编码，js和css文件如果是使用`utf8`编码，须在标签上加上`charset="utf-8"`
-
+html文件统一使用 `gb2312` 编码，而js和css文件如果是使用 `utf8` 编码，须在标签上加上 `charset="utf-8"`
 ```html
 <!DOCTYPE html>
 <head>
 <meta charset="gb2312">
 <title></title>
 <link charset="utf-8" rel="stylesheet" href="//www.poco.cn/css_common/v3/global/topbar.css">
-<script charset="utf-8" href="//cb.poco.cn/seajs/2.1.1/sea.js"></script>
+<script charset="utf-8" src="//cb.poco.cn/seajs/2.1.1/sea.js"></script>
 </head>
 
 <body>
@@ -26,7 +25,6 @@ html文件统一使用`gb2312`编码，js和css文件如果是使用`utf8`编码
 
 ##兼容模式
 以IE最高级模式渲染文档
-
 ```html
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 ```
@@ -34,7 +32,6 @@ html文件统一使用`gb2312`编码，js和css文件如果是使用`utf8`编码
 
 ##注释
 建议对超过30-50行的页面模块进行注释，以降低开发人员的嵌套成本和后期的维护成本。例如：
-
 ```html
 <div id="sample">
 ...
@@ -53,16 +50,15 @@ html文件统一使用`gb2312`编码，js和css文件如果是使用`utf8`编码
 ###页面标题 `<title>`
 
 每个页面必须有且仅有一个 title 元素
-
 ```html
 <title>It's me! 中国图片个人空间  mypoco -- POCO.CN</title>
 ```
 
 ###静态文件引用/脚本/样式代码 `<link>/<script>/<style>`
 
-  - `link` - 用于引入 css 资源时，可省去`media`(默认为all) 和 `type`(默认为text/css) 属性
+  - `link` - 用于引入 css 资源时，可省去 `media` （默认为all） 和 `type` （默认为text/css） 属性
   - `style` - `type` 默认为 `text/css`，可以省去
-  - `script` - `type` 属性可以省去，不赞成使用`lang`属性，不要使用古老的`<!– //–>`这种hack脚本，它用于阻止第一代浏览器（Netscape 1和Mosaic）将脚本显示成文字
+  - `script` - `type` 属性可以省去，不赞成使用`lang`属性，不要使用古老的 `<!– //–>` 这种hack脚本，它用于阻止第一代浏览器（Netscape 1和Mosaic）将脚本显示成文字
 
 
 ###段落/标题 `<p>/<h1>/<h2>/<h3>/<h4>/<h5>/<h6>`
@@ -79,7 +75,7 @@ html文件统一使用`gb2312`编码，js和css文件如果是使用`utf8`编码
 
   - `ul` 表示无序列表
   - `ol` 表示有序列表, 可用于排行榜等
-  - `li` 表示列表项，必须是`ul/ol`的子元素
+  - `li` 表示列表项，必须是 `ul/ol` 的子元素
 
 
 ###定义列表 `<dl>`
@@ -129,7 +125,6 @@ html文件统一使用`gb2312`编码，js和css文件如果是使用`utf8`编码
 ```
 
 ###流媒体 `<object>/<embed>/<video>/<audio>`
-
  - `<video>` - 标签定义视频。
  - `<audio>` - 标签定义声音，比如音乐或其他音频流。
 
@@ -137,7 +132,7 @@ html文件统一使用`gb2312`编码，js和css文件如果是使用`utf8`编码
 <video width="320" height="240" controls="controls">
   <source src="movie.ogg" type="video/ogg">
   <source src="movie.mp4" type="video/mp4">
-Your browser does not support the video tag.
+  您的浏览器不支持 video 标签。
 </video>
 
 <audio src="someaudio.wav">您的浏览器不支持 audio 标签。</audio>
@@ -155,7 +150,6 @@ HTML 中的预留字符 `小于号（<）和大于号（>）` 必须被替换为
 
 
 ###分节元素 `<section>/<article>/<aside>/<nav>`
-
 
 ####section
 section是用来对页面上的内容分块处理，表示一段主题的分组，通常带有一个标题（h1-6），应用的典型场景有：文章的章节、标签对话框中的标签页、或者论文中有编号的部分；
