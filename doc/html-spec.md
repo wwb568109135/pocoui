@@ -391,7 +391,37 @@ article 可以看作是一个特殊的 section 标签，它是一个独立、完
 
 
 ####footer
+定义 section 或 document 的页脚，在通常情况下，该元素会包含创作者的姓名、文档的创作日期以及/或者联系信息。
 
+与 `<header>` 相同，你可以在一个页面中拥有一个以上 `<footer>` ，也可以将 `<footer>` 作为全局页面上
+
+
+```html
+<footer>
+    <ul>
+        <li>copyright</li>
+        <li>sitemap</li>
+        <li>contact</li>
+        <li>to top</li>
+    </ul>
+</footer>
+
+<!-- 应用于 Section -->
+<section>
+    Section content appears here.
+    <footer>
+    Footer information for section.
+    </footer>
+</section>
+
+<!-- 应用于 Article -->
+<article>
+    Article content appears here.
+    <footer>
+    Footer information for article.
+    </footer>
+</article>
+```
 
 ##Why HTML5?
 
