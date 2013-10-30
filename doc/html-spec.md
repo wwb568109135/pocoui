@@ -156,6 +156,7 @@ HTML 中的预留字符必须被替换为字符实体，[字符实体表][5]
 
 ###分节元素 `<section>/<article>/<aside>/<nav>`
 
+
 ####section
 摘自www.w3.org
 > The section element represents a generic section of a document or
@@ -165,6 +166,13 @@ HTML 中的预留字符必须被替换为字符实体，[字符实体表][5]
 还有
 
 > Authors are encouraged to use the article element instead of the section element when it would make sense to syndicate the contents of the element.
+
+####article
+
+####aside
+
+####nav
+
 
 例子：
 ```html
