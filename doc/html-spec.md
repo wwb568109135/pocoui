@@ -158,16 +158,59 @@ HTML 中的预留字符 `小于号（<）和大于号（>）` 必须被替换为
 
 
 ####section
-摘自www.w3.org
-> The section element represents a generic section of a document or
-> application. A section, in this context, is a thematic grouping of
-> content, typically with a heading.
+section是用来对页面上的内容分块处理，表示一段主题的分组，通常带有一个标题（h1-6），应用的典型场景有：文章的章节、标签对话框中的标签页、或者论文中有编号的部分；
 
-还有
+***注意：*** section 不是代替 div ，section 不是一个作为容器的元素，当你需要一个元素来作容器的话，请用回`<div>`
 
+
+W3C上有一句：
 > Authors are encouraged to use the article element instead of the section element when it would make sense to syndicate the contents of the element.
 
+，鼓励应该使用 article 来替换 section
+
+例子：
+```html
+```
+
+扩展阅读：
+ - [W3C section Spec][7]
+ - [tml5doctor the section element][8]
+
 ####article
+
+例子：
+```html
+<article>
+    <header>
+        <h1>The Very First Rule of Life</h1>
+        <p><time datetime="2009-10-09">3 days ago</time></p>
+        <link href="?comments=0">
+    </header>
+    <p>If there's a microphone anywhere near you, assume it's hot and sending whatever you're saying to the world. Seriously.</p>
+    <p>...</p>
+    
+    <section>
+        <h1>Comments</h1>
+        <article id="c1">
+            <link href="#c1">
+            <footer>
+                <p>Posted by: <span><span>George Washington</span></span></p>
+                <p><time datetime="2009-10-10">15 minutes ago</time></p>
+            </footer>
+            
+            <p>Yeah! Especially when talking about your lobbyist friends!</p>
+        </article>
+        <article id="c2">
+            <link href="#c2">
+            <footer>
+                <p>Posted by: <span><span>George Hammond</span></span></p>
+                <p><time datetime="2009-10-10">5 minutes ago</time></p>
+            </footer>
+            <p>Hey, you have the same first name as me.</p>
+        </article>
+    </section>
+</article>
+```
 
 ####aside
 
@@ -218,6 +261,15 @@ HTML 中的预留字符 `小于号（<）和大于号（>）` 必须被替换为
 </body>
 ```
 
+###头和尾 `<header>/<hgroup>/<footer>`
+
+####header
+表示一组介绍性或导航性质的辅助文字，经常用作 `<section>` 的头部
+
+####hgroup
+####footer
+
+
 ##Why HTML5?
 
 ###HTML5设计原理
@@ -256,3 +308,5 @@ IE6、IE7、IE8浏览器不支持？用[html5shiv][2]，将它们注入到 DOM �
 [4]: http://slides.html5rocks.com/#landing-slide
 [5]: http://www.ascii-code.com/html-symbol.php
 [6]: https://chrome.google.com/webstore/detail/html5-outliner/afoibpobokebhgfnknfndkgemglggomo
+[7]: http://www.w3.org/TR/html5/sections.html#the-section-element
+[8]: http://html5doctor.com/the-section-element/
