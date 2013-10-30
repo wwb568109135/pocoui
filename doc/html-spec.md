@@ -166,17 +166,39 @@ section是用来对页面上的内容分块处理，表示一段主题的分组�
 W3C上有一句：
 > Authors are encouraged to use the article element instead of the section element when it would make sense to syndicate the contents of the element.
 
-，鼓励应该使用 article 来替换 section
+当元素内容更加具体而充实的时候，鼓励开发者使用 article 来替换 section
 
-例子：
+
+一个简单的苹果分类例子：
 ```html
+<article>
+    <header>
+        <h1>Apples</h1>
+        <p>Tasty, delicious fruit!</p>
+    </header>
+    <p>The apple is the pomaceous fruit of the apple tree.</p>
+  
+    <section>
+        <h1>Red Delicious</h1>
+        <p>These bright red apples are the most common found in many supermarkets.</p>
+    </section>
+    <section>
+        <h1>Granny Smith</h1>
+        <p>These juicy, green apples make a great filling for apple pies.</p>
+    </section>
+</article>
 ```
 
 扩展阅读：
  - [W3C section Spec][7]
  - [tml5doctor the section element][8]
 
+
 ####article
+
+> The article element represents a complete, or self-contained, composition in a document, page, application, or site and that is, in principle, independently distributable or reusable, e.g. in syndication. This could be a forum post, a magazine or newspaper article, a blog entry, a user-submitted comment, an interactive widget or gadget, or any other independent item of content.
+
+article 可以看作是一个特殊的 section 标签，它是一个独立、完整的内容块，适用的场景：论坛帖子、报刊文章、博文、用户评论、互动的工具和一些任意的独立内容。
 
 例子：
 ```html
@@ -212,54 +234,62 @@ W3C上有一句：
 </article>
 ```
 
+#####Section or Article?
+引用
+> 不要把<article>放在印刷的范畴，比如报纸的文章，而是把它认为是一个独立的个体，像“文章的衣服”来描述，但是它也能包含其它的文章，使这件衣服包容的东西更多。
+> — Bruce Lawson
+
+
+其实重点就是一段内容脱离了整体，还能作为一个完整的、独立的内容而存在，这情况下适合使用 `<article>` ，反之如果内容上下文有关联，使用 `<section>`
+
+他们间最主要的区别是：`<article>` 元素是为信息聚合设计的，而 `<section>` 元素是用来描述文档结构和可调用性。
+
+在 HTML5 设计原理 中，有一条是专门用来解决类似情况的：
+
+最终用户优先(Priority of Constituencies)
+
+> “In case of conflict, consider users over authors over implementors over specifiers over theoretical purity.”
+
+一旦遇到冲突，最终用户优先，其次是作者，其次是实现者，其次标准制定者，最后才是理论。
+
+
 ####aside
+用于摆放与页面的主要内容没有相关联东西，例如大量导航和广告链接等
+
+```html
+<header>
+    <h1>我的博客</h1>
+</header>
+
+<aside>
+    <nav>
+        <h1>友情链接</h1>
+        <ul>
+            <li><a href="http://www.example.com/">example1</a>
+            <li><a href="http://www.example2.com/">example2</a>
+        </ul>
+    </nav>
+</aside>
+
+<article>
+内容...
+</article>
+```
+
 
 ####nav
+定义导航链接，链接到其它页面或页面中某个区域，注意一点就是并非所有导向性的链接都使用 nav 元素，例如：页脚的链接组（关于我、版权、联系我们之类）、友情链接等，`<nav>` 主要目的是用于用户进行导航
 
-
-例子：
 ```html
-<body>
-    <header>
-        <hgroup>
-            <h1>Page title</h1>
-            <h2>Page subtitle</h2>
-        </hgroup>
-    </header>
-
-    <nav>
-        <ul>Navigation...</ul>
-    </nav>
-
-    <section>
-        <article>
-            <header>
-                <h1>Title</h1>
-            </header>
-            <section>Content...</section>
-        </article>
-        <article>
-            <header>
-                <h1>Title</h1>
-            </header>
-            <section>Content...</section>
-        </article>
-    </section>
-
-    <aside>
-        Top links...
-    </aside>
-
-    <figure>
-        <img src="..."/>
-        <figcaption>Chart 1.1</figcaption>
-    </figure>
-
-    <footer>
-        Copyright © <time datetime="2010-11-08">2010</time>.
-    </footer>
-</body>
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/blog/">Blog</a></li>
+    </ul>
+</nav>
 ```
+
 
 ###头和尾 `<header>/<hgroup>/<footer>`
 
