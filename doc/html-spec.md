@@ -221,7 +221,7 @@ HTML 中的预留字符必须被替换为字符实体，[字符实体表][5]
  6. 最终用户优先
 
 
-##老掉牙浏览器 vs HTML5
+###老掉牙浏览器 vs HTML5
 IE6、IE7、IE8浏览器不支持？用[html5shiv][2]，将它们注入到 DOM 中 `</head>` 前面
 ```html
 <!--[if lt IE 9]>
@@ -229,7 +229,13 @@ IE6、IE7、IE8浏览器不支持？用[html5shiv][2]，将它们注入到 DOM �
 <![endif]-->
 ```
 
-http://www.ascii-code.com/html-symbol.php
+###注意事项
+ - 不支持HTML5的浏览器必须使用html5shiv去开启
+ - 为保持统一，必须将HTML5元素reset
+ - 在不熟悉使用哪个HTML5语义的时候，先用HTML4标准去做，然后按照语义进行调整
+ - 使用 Chrome 的 [html5outliner][6] 去检查成果
+
+
 
 ##延伸阅读：
  - [HTML5语义][1]
@@ -241,3 +247,4 @@ http://www.ascii-code.com/html-symbol.php
 [3]: http://bogu.me/2012/03/09/3207.html
 [4]: http://slides.html5rocks.com/#landing-slide
 [5]: http://www.ascii-code.com/html-symbol.php
+[6]: https://chrome.google.com/webstore/detail/html5-outliner/afoibpobokebhgfnknfndkgemglggomo
