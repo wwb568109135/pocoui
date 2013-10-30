@@ -278,7 +278,24 @@ article 可以看作是一个特殊的 section 标签，它是一个独立、完
 
 
 ####nav
-定义导航链接，链接到其它页面或页面中某个区域，注意一点就是并非所有导向性的链接都使用 nav 元素，例如：页脚的链接组（关于我、版权、联系我们之类）、友情链接等，`<nav>` 主要目的是用于用户进行导航
+定义导航链接，链接到其它页面或页面中某个区域
+
+注意一点：不是非所有导向性的链接都使用 nav 元素，例如：页脚的链接组（关于我、版权、联系我们之类）`<footer>` 元素已经足够，`<nav>` 主要目的是用于用户进行导航
+
+适用范围：
+ - 主要导航
+ - 站內搜索
+ - 二级导航
+ - 页面内导航
+
+不应该使用：
+ - 分页
+ - 文章标签、分类
+ - 三级导航
+ - 页脚
+
+
+每当输入 `nav` 三个字母时，问一下自己：“接下来输入的链接，是主要导航吗？”
 
 ```html
 <nav>
@@ -294,9 +311,85 @@ article 可以看作是一个特殊的 section 标签，它是一个独立、完
 ###头和尾 `<header>/<hgroup>/<footer>`
 
 ####header
-表示一组介绍性或导航性质的辅助文字，经常用作 `<section>` 的头部
+通常包含一组介绍性或导航性质的辅助文字，经常用作 `<section>` 的头部，一个 header 通常都包含一个标题（H1-6），但这不是硬性规定，也可以包含一段内容、搜索表单或一个LOGO。
+
+***注意：*** `<header>` 在页面中并非只有一个，不要理解为它只会出现页面的头部，一些页面的内容元素都可以出现 `<header>`
+
+```html
+<header>
+    <p>Welcome to...</p>
+    <h1>Voidwars!</h1>
+</header>
+```
+
+```html
+<article>
+    <header>
+        <h3>feed title</h3>
+        <p><time datetime="2010-03-20">20th March, 2010</time></p>
+    <header>
+    <p>content....</p>
+</article>
+<article>
+    <header>
+        <h3>feed title</h3>
+        <p><time datetime="2010-03-20">20th March, 2010</time></p>
+    <header>
+    <p>content....</p>
+</article>
+```
+
 
 ####hgroup
+代表一组标题，当头部有多层结构时，比如有子头部，副标题，各种标识文字等，使用 hgroup 将 H1-H6 元素组合起来作为部分的头部
+
+对于初接触同学来说，`<header>` 和 `<hgroup>` 应该怎么使用，看看以下例子：
+
+
+```html
+<!-- 假如内容中只有一个标题元素，就不需要使用 `<header>` 或 `<hgroup>` -->
+<article>
+    <h1>Title goes here</h1>
+    <p>Lorem Ipsum dolor set amet</p>
+</article>
+
+<!-- 含有主标题、辅助信息、正文内容` -->
+<article>
+    <header>
+        <h1>Title goes here</h1>
+        <p><time datetime="2010-03-20">20th March, 2010</time></p>
+    </header>
+    <p>Lorem Ipsum dolor set amet</p>
+</article>
+
+<!-- 含有主标题、副标题、正文内容 -->
+<article>
+    <hgroup>
+        <h1>Title goes here</h1>
+        <h2>Subtitle of article</h2>
+    </hgroup>
+    <p>Lorem Ipsum dolor set amet</p>
+</article>
+
+<!-- 含有主标题、副标题、辅助信息、正文内容 -->
+<article>
+    <header>
+        <hgroup>
+            <h1>Title goes here</h1>
+            <h2>Subtitle of article</h2>
+        </hgroup>
+        <p><time datetime="2010-03-20">20th March, 2010</time></p>
+    </header>                
+    <p>Lorem Ipsum dolor set amet</p>
+</article>
+```
+
+总体来说：
+ - 如果你只有一个标题元素，直接用（H1-6），不需要用上 `<hgroup>`
+ - 如果你有多个标题，用上 `<hgroup>` 会很适合
+ - 如果你带有多个标题，并还有其他辅助性元素时，先将标题放置入 `<hgroup>` 并连同辅助性元素放入 `<header>` 元素内
+
+
 ####footer
 
 
