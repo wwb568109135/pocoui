@@ -123,11 +123,36 @@ html文件统一使用 `gb2312` 编码，而js和css文件如果是使用 `utf8`
 ###格式化片段 `<pre>`
 原单词为Preformatted text，定义重要的文本
 
+
+###引用 `<blockquote>`
+定义块引用
+`<blockquote>` 与 `</blockquote>`  之间的所有文本都会从常规文本中分离出来，经常会在左、右两边进行缩进（增加外边距），而且有时会使用斜体。也就是说，块引用拥有它们自己的空间。
+
+###缩写 `<abbr>`
+表示一个缩写形式，比如 "Inc."、"etc."。通过对缩写词语进行标记，您就能够为浏览器、拼写检查程序、翻译系统以及搜索引擎分度器提供有用的信息。
+```html
+<abbr title="etcetera">etc.</abbr>
+```
+
+###删除 `<del>`
+定义文档中已被删除的文本。有些情况请与 `<ins>` 标签配合使用，来描述文档中的更新和修正。
+```html
+a dozen is <del>20</del> 12 pieces
+
+a dozen is <del>20</del> <ins>12</ins> pieces
+```
+
 ###图片 `<img>`
 图片必须加上alt
 ```html
 <img src="http://image15-c.poco.cn/mypoco/myphoto/20131021/17/521181332013102117065803_640.jpg" alt="卑鄙的我2">
 ```
+
+###表格 `<table>`
+最为熟悉不过的元素标签，简单的 HTML 表格由 table 元素以及一个或多个 `<tr>` `<th>` 或 `<td>` 元素组成。
+`<tr>` 元素定义表格行，`<th>` 元素定义表头，`<td>` 元素定义表格单元。
+
+***注意：*** 如果没添加 `<tbody>` 的话，浏览器会自动为你添加。
 
 ###流媒体 `<object>/<embed>/<video>/<audio>`
  - `<video>` - 标签定义视频。
