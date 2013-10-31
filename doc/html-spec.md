@@ -42,6 +42,11 @@ html文件统一使用 `gb2312` 编码，而js和css文件如果是使用 `utf8`
 </div> <!-- #sample END -->
 ```
 
+##基本规范
+ - 元素的标签和属性名必须小写，属性值必须加双引号
+ - 正确区分自闭合元素和非自闭合元素。非法闭合包括：`<br>..</br>` `<script />` `<iframe />`，非法闭合会导致页面嵌套错误问题
+ - 通过给元素设置自定义属性来存放与 JavaScript 交互的数据，属性名格式为 `data-xx` （例如：`data-lazyload-url`）
+ - 通过事件冒泡监听的行为，当行为有多个功能时，可以将触发元素赋予 `role` 属性（如：`<a href="javascript:;" role="remove" data-article-id="123">删除</a>` ）
 
 ##HTML Tag
 用合理HTML标记以及其特有的属性去格式化文档内容
