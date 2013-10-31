@@ -176,7 +176,7 @@ i for Italic，原意是呈现斜体的文本，现在 `<i>` 基本上已经被�
 
 
 ###字符实体
-HTML 中的预留字符 `小于号（<）和大于号（>）` 必须被替换为字符实体，[字符实体表][5]
+HTML 中的预留字符 `小于号（<）和大于号（>）` 必须被替换为字符实体，[字符实体表][1]
 
 
 ###分节元素 `<section>/<article>/<aside>/<nav>`
@@ -214,8 +214,8 @@ W3C上有一句：
 ```
 
 扩展阅读：
- - [W3C section Spec][7]
- - [tml5doctor the section element][8]
+ - [W3C section Spec][2]
+ - [tml5doctor the section element][3]
 
 
 ####article
@@ -459,7 +459,7 @@ article 可以看作是一个特殊的 section 标签，它是一个独立、完
 
 
 ###老掉牙浏览器 vs HTML5
-IE6、IE7、IE8浏览器不支持？用[html5shiv][2]，将它们注入到 DOM 中 `</head>` 前面
+IE6、IE7、IE8浏览器不支持？用[html5shiv][4]，将它们注入到 DOM 中 `</head>` 前面
 ```html
 <!--[if lt IE 9]>
     <script src="//cb.poco.cn/utility/html5shiv/3.7.0/html5shiv.js"></script>
@@ -470,20 +470,24 @@ IE6、IE7、IE8浏览器不支持？用[html5shiv][2]，将它们注入到 DOM �
  - 不支持HTML5的浏览器必须使用html5shiv去开启
  - 为保持统一，必须将HTML5元素reset
  - 在不熟悉使用哪个HTML5语义的时候，先用HTML4标准去做，然后按照语义进行调整
- - 使用 Chrome 的 [html5outliner][6] 去检查成果
+ - 使用 Chrome 的 [html5outliner][5] 去检查成果
+ - 不知道如何使用HTML5标签，请阅读看看此图
+    ![HTML5 Element Flowchart][6]
 
 
 
 ##延伸阅读：
- - [HTML5语义][1]
- - [HTML5设计原理][3]
- - [HTML示例][4]
+ - [HTML5语义][7]
+ - [HTML5设计原理][8]
+ - [HTML示例][9]
 
-[1]: http://www.infoq.com/cn/news/2011/09/understanding-html5-semantics
-[2]: https://github.com/aFarkas/html5shiv
-[3]: http://bogu.me/2012/03/09/3207.html
-[4]: http://slides.html5rocks.com/#landing-slide
-[5]: http://www.ascii-code.com/html-symbol.php
-[6]: https://chrome.google.com/webstore/detail/html5-outliner/afoibpobokebhgfnknfndkgemglggomo
-[7]: http://www.w3.org/TR/html5/sections.html#the-section-element
-[8]: http://html5doctor.com/the-section-element/
+
+  [1]: http://www.ascii-code.com/html-symbol.php
+  [2]: http://www.w3.org/TR/html5/sections.html#the-section-element
+  [3]: http://html5doctor.com/the-section-element/
+  [4]: https://github.com/aFarkas/html5shiv
+  [5]: https://chrome.google.com/webstore/detail/html5-outliner/afoibpobokebhgfnknfndkgemglggomo
+  [6]: http://image15-c.poco.cn/mypoco/myphoto/20131031/09/5211813320131031094800010.png
+  [7]: http://www.infoq.com/cn/news/2011/09/understanding-html5-semantics
+  [8]: http://bogu.me/2012/03/09/3207.html
+  [9]: http://slides.html5rocks.com/#landing-slide
